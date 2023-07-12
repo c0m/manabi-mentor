@@ -1,0 +1,63 @@
+openapi: 3.0.1
+info:
+  title: Manabi Mentor
+  description: A ChatGPT plugin designed to mentor the user through Cure Dolly's Japanese course. 
+  version: 'v0'
+servers:
+  - url: http://localhost:3333
+paths:
+  /lessons/{lesson_number}:
+    get:
+      operationId: getLesson
+      summary: Get all the details of a given lesson
+      parameters:
+      - name: lesson_number
+        in: path
+        schema:
+            type: integer
+        required: true
+        description: The name of the lesson
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getLessonResponse'
+components:
+  schemas:
+    getLessonResponse:
+      type: object
+      properties:
+        video_link:
+          type: string
+          description: The URL of the video for the lesson.
+        lecture_text:
+          type: string
+          description: The transcript of the lecture.
+        can_use_romaji:
+          type: boolean
+          description: Whether the lesson allows the use of romaji.
+        knowledge_assumed:
+          type: string
+          description: The knowledge that is assumed for the lesson.
+        exercises:
+          type: object
+          properties:
+            exercise_list:
+              type: array
+              items:
+                $ref: '#/components/schemas/Exercise'
+            post_exercise_instructions:
+              type: string
+              description: Instructions to be followed after the exercises.
+
+    Exercise:
+      type: object
+      properties:
+        type:
+          type: string
+          description: The type of the exercise.
+        description:
+          type: string
+          description: The description of the exercise.
