@@ -19,32 +19,30 @@
                         "type": "Sentence Type Identification",
                         "description": "Provide a set of Japanese sentences and ask the learner to identify whether each sentence is an A does B sentence, an A is B sentence, or an A is adjective sentence."
                     }
-                ],
-                "post_exercise_instructions": "fill me in"
+                ]
             }
         },
         "2": {
-            "video_link": "fill me in",
-            "lecture_text": "fill me in",
+            "video_link": "",
+            "lecture_text": "",
             "can_use_romaji": true,
-            "knowledge_assumed": "fill me in",
+            "knowledge_assumed": "",
             "exercises": {
-                "instructions": "fill me in",
+                "instructions": "",
                 "exercise_list": [
                     {
-                        "type": "Sentence Construction",
-                        "description": "fill me in"
+                        "type": "",
+                        "description": ""
                     },
                     {
-                        "type": "Sentence Translation",
-                        "description": "fill me in"
+                        "type": "",
+                        "description": ""
                     },
                     {
-                        "type": "Sentence Type Identification",
-                        "description": "fill me in"
+                        "type": "",
+                        "description": ""
                     }
-                ],
-                "post_exercise_instructions": "fill me in"
+                ]
             }
         }
     }
