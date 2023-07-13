@@ -18,7 +18,7 @@ async def get_lesson(lesson_number: int):
     if lesson is not None:
         return lesson
     else:
-        return {"error": "Lesson not found"}
+        return quart.abort(404, description="Lesson appears not to exist in the database. Advise the user of this and move on.")
 
 @app.get("/logo.png")
 async def plugin_logo():
